@@ -1,2 +1,2 @@
 # github-actions-test
-Experiments with GizHub actions 
+Experiments with GitHub Actions 
