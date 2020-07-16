@@ -12,11 +12,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - uses: actions/setup-node@v2.1.0
+      with:
+        node-version: '12' 
+     
+    - run: npm ci
+      working-directory: ./testoapp 
+      
+    - run: npm run deploy
+      working-directory: ./testoapp   
