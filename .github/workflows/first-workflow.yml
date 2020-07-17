@@ -13,13 +13,11 @@ jobs:
     steps: 
       - uses: actions/checkout@v2
       - name: Install and build 
-        run: |
+      - run: |
           npm install
-          with:
            working-directory: ./testoapp 
           
           npm run build:prod
-           with: 
             working-directory: ./testoapp 
       
       - uses: actions/upload-artifact@master
