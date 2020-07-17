@@ -48,7 +48,7 @@ jobs:
     - run: npm ci
       working-directory: ./testoapp   
     
-    - run: npm test:prod
+    - run: npm run test:prod
       working-directory: ./testoapp   
       env:
         CI: true
