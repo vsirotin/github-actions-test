@@ -12,13 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
-      - name: Install and build 
-      - run: |
-          npm install
-           working-directory: ./testoapp 
+      - run: npm install
+        working-directory: ./testoapp
           
-          npm run build:prod
-            working-directory: ./testoapp 
+      - run: npm run build:prod
+        working-directory: ./testoapp 
       
       - uses: actions/upload-artifact@master
         with: 
