@@ -14,12 +14,14 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install and build 
         run: |
-           defaults: 
-            working-directory: ./testoapp
           npm install
+          with:
            working-directory: ./testoapp 
+          
           npm run build:prod
-           working-directory: ./testoapp 
+           with: 
+            working-directory: ./testoapp 
+      
       - uses: actions/upload-artifact@master
         with: 
           name: build-result
