@@ -1,4 +1,4 @@
-name: Approval workflow v2
+name: Approval workflow v3
 on: pull_request_review
 
 jobs:
